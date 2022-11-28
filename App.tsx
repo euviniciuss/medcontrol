@@ -1,4 +1,4 @@
-import { NativeBaseProvider } from 'native-base'
+import { NativeBaseProvider, StatusBar } from 'native-base'
 import { useFonts, Roboto_400Regular, Roboto_700Bold } from '@expo-google-fonts/roboto'
 
 import Login from './src/pages/Login'
@@ -11,6 +11,12 @@ export default function App() {
 
   return (
     <NativeBaseProvider theme={THEME}>
+      <StatusBar 
+        barStyle="light-content"
+        backgroundColor="transparent"
+        translucent
+      />
+
       { fontsLoaded ? <Login /> : <Loading /> }
     </NativeBaseProvider>
   );
