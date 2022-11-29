@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { Icon, Pressable, useTheme, FormControl } from 'native-base'
 import { Eye, EyeSlash } from 'phosphor-react-native'
 
-import { Input } from '../../../shared/form/Input'
+import { Input, Button } from '../../../shared/form'
 
 export function FormSection() {
   const { colors } = useTheme()
@@ -35,6 +35,10 @@ export function FormSection() {
           }
         />
       </FormControl>
+
+      <Button w="full" mt={12}>
+        <Button.Title>Entrar</Button.Title>
+      </Button>
     </>
   )
 }
