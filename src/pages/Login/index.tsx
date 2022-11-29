@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-import { VStack, Heading, Icon, Pressable, useTheme } from 'native-base'
+import { VStack, Heading, Icon, Pressable, useTheme, FormControl } from 'native-base'
 import { Eye, EyeSlash } from 'phosphor-react-native'
 
 import Logo from '../../assets/logo.svg'
@@ -16,25 +16,31 @@ export default function Login() {
 
       <Heading color="gray.100" fontSize="xl" mt={20} mb={6}>Hello Login</Heading>
 
-      <Input 
-        placeholder="Email" 
-        mb={4} 
-        type="text"
-      />
-      <Input 
-        placeholder="Senha" 
-        type={ showPassword ? "text" : "password"} 
-        InputRightElement={
-          <Pressable onPress={() => setShowPassword(!showPassword)}>
-            {
-              showPassword 
-              ? <Icon as={<EyeSlash color={colors.gray[200]} />} mr={4} /> 
-              : <Icon as={<Eye color={colors.gray[200]} />} mr={4} />
-            }
-            
-          </Pressable>
-        }
-      />
+      <FormControl isRequired mb={4} >
+        <FormControl.Label>Email</FormControl.Label>
+        <Input 
+          placeholder="Digite seu email" 
+          type="text"
+        />
+      </FormControl>
+      <FormControl isRequired>
+        <FormControl.Label>Senha</FormControl.Label>
+        <Input 
+          placeholder="Digite sua senha" 
+          type={ showPassword ? "text" : "password"} 
+          InputRightElement={
+            <Pressable onPress={() => setShowPassword(!showPassword)}>
+              {
+                showPassword 
+                ? <Icon as={<EyeSlash color={colors.gray[200]} />} mr={4} /> 
+                : <Icon as={<Eye color={colors.gray[200]} />} mr={4} />
+              }
+              
+            </Pressable>
+          }
+        />
+      </FormControl>
+
     </VStack>
   )
 }
