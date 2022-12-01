@@ -9,6 +9,9 @@ export function FormSection() {
   const { colors } = useTheme()
   const [showPassword, setShowPassword] = useState(false)
 
+  const [email, setEmail] = useState('')
+  const [passoword, setPassword] = useState('')
+
   return(
     <>
       <FormControl isRequired mb={4} >
@@ -16,6 +19,7 @@ export function FormSection() {
         <Input 
           placeholder="Digite seu email" 
           type="text"
+          onChangeText={setEmail}
         />
       </FormControl>
       <FormControl isRequired>
@@ -23,6 +27,7 @@ export function FormSection() {
         <Input 
           placeholder="Digite sua senha" 
           type={ showPassword ? "text" : "password"} 
+          onChangeText={setPassword}
           InputRightElement={
             <Pressable onPress={() => setShowPassword(!showPassword)}>
               {
