@@ -11,7 +11,7 @@ export function MainSection() {
   return (
     <VStack flex={1} px={6}>
       <HStack w="full" mt={12} mb={4} alignItems="center">
-        <Heading color="gray.100">Consulte aqui suas opções! 💊</Heading>
+        <Heading color="gray.100" bold>Consulte aqui suas opções! 💊</Heading>
       </HStack>
 
       <VStack w="full" mt={6} alignItems="center" justifyContent="center" space={6}>

@@ -11,13 +11,12 @@ export function HeaderSection() {
     <HStack
       w="full"
       alignItems="center"
-      bg="gray.600"
-      pt={12}
+      pt={16}
       pb={5}
       px={4}
     >
-      <IconButton icon={<List color={colors.gray[200]} size={26} />} mr={2}/>
-      <Heading color="white">MedControl +</Heading>
+      <IconButton icon={<List color={colors.gray[200]} size={42} />} mr={4}/>
+      <Logo width={62} height={62} />
     </HStack>
   )
 }
