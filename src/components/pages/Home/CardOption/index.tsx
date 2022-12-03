@@ -1,24 +1,20 @@
 import { ReactNode } from 'react'
-
-import { useNavigation } from '@react-navigation/native'
-
-import { VStack, Text, Icon, Container, useTheme, Button, IButtonProps } from 'native-base'
+import { VStack, Text, Icon, Container, useTheme, Pressable, IPressableProps } from 'native-base'
 
 import { ArrowRight } from 'phosphor-react-native'
 
-type Props = IButtonProps & {
+type Props = IPressableProps & {
   title: string,
   icon: ReactNode
 }
 
 export function CardOption({ title, icon, ...rest }: Props) {
-  const navigation = useNavigation()
   const { colors } = useTheme()
 
   return(
-    <Button
+    <Pressable
       flex={1}
-      backgroundColor="gray.600" 
+      backgroundColor="gray.600"
       py={22}
       px={4}
       height={242}
@@ -41,6 +37,6 @@ export function CardOption({ title, icon, ...rest }: Props) {
           <Icon as={<ArrowRight color={colors.white} />}/>
         </Container>
       </VStack>
-    </Button>
+    </Pressable>
   )
 }

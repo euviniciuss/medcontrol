@@ -1,11 +1,26 @@
 import { useState } from 'react'
 
-import { Heading, HStack, VStack, Text } from "native-base";
+import { Heading, HStack, VStack, Text, FlatList } from "native-base";
 
 import { Filter } from '../Filter'
+import { Order, OrderProps } from '../Order'
 
 export function QueriesSection() {
   const [statusSelected, setStatusSelected] = useState<'open' | 'closed'>('open')
+  const [orders, setOrders] = useState<OrderProps[]>([
+    {
+      id: '1',
+      consult: 'Médico geral',
+      when: '03/12/2022 às 16:00',
+      status: 'marked'
+    },
+    {
+      id: '2',
+      consult: 'Médico Plantão',
+      when: '03/12/2022 às 16:00',
+      status: 'closed'
+    },
+  ])
 
   return(
     <VStack flex={1} px={6}>
@@ -28,6 +43,12 @@ export function QueriesSection() {
           isActive={statusSelected === 'closed'}
         />
       </HStack>
+
+      <FlatList 
+        data={orders}
+        keyExtractor={item => item.id}
+        renderItem={({ item }) => <Order key={item.id} data={item}/>}
+      />
     </VStack>
   )
 }
