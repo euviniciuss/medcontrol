@@ -6,7 +6,7 @@ export function HeaderSection() {
   return(
     <>
       <Logo />
-      <Heading color="gray.100" fontSize="xl" mt={20} mb={6}>Hello Login</Heading>
+      <Heading color="gray.100" fontSize="xl" mt={20} mb={6}>Faça seu login no Medcontrol!</Heading>
     </>
   )
 }

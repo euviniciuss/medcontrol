@@ -12,6 +12,10 @@ export function FormSection() {
   const [email, setEmail] = useState('')
   const [passoword, setPassword] = useState('')
 
+  function setUserLogin() {
+    console.log(email, passoword);
+  }
+
   return(
     <>
       <FormControl isRequired mb={4} >
@@ -41,7 +45,7 @@ export function FormSection() {
         />
       </FormControl>
 
-      <Button w="full" mt={12}>
+      <Button w="full" mt={12} onPress={setUserLogin}>
         <Button.Title>Entrar</Button.Title>
       </Button>
     </>

@@ -1,6 +1,6 @@
 import { VStack } from 'native-base'
 
-import { HeaderSection, FormSection } from '../../components/pages'
+import { HeaderSection, FormSection } from '../../components/pages/Login'
 
 export default function Login() {
   return(
