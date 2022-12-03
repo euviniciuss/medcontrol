@@ -1,19 +1,25 @@
 import { useState } from 'react'
 
+import { useNavigation } from '@react-navigation/native'
+
 import { Icon, Pressable, useTheme, FormControl } from 'native-base'
 import { Eye, EyeSlash } from 'phosphor-react-native'
 
 import { Input, Button } from '../../../shared/form'
 
 export function FormSection() {
+  const navigation = useNavigation()
+
   const { colors } = useTheme()
   const [showPassword, setShowPassword] = useState(false)
 
   const [email, setEmail] = useState('')
   const [passoword, setPassword] = useState('')
 
-  function setUserLogin() {
-    console.log(email, passoword);
+  function handleLogin() {
+    navigation.navigate('home')
+
+    console.log("Email: ", email, "Senha: ",passoword);
   }
 
   return(
@@ -45,7 +51,7 @@ export function FormSection() {
         />
       </FormControl>
 
-      <Button w="full" mt={12} onPress={setUserLogin}>
+      <Button w="full" mt={12} onPress={handleLogin}>
         <Button.Title>Entrar</Button.Title>
       </Button>
     </>
