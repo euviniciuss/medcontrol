@@ -1,7 +1,12 @@
-import { Text } from "native-base";
+import { Page } from '../../components/shared/layout'
+import { QueriesSection } from '../../components/pages/Queries'
+import { Header } from '../../components/shared/navigation'
 
 export default function Queries() {
   return(
-    <Text color="white">Hello Queries Page</Text>
+    <Page>
+      <Header />
+      <QueriesSection />
+    </Page>
   )
 }

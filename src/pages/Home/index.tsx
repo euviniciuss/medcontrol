@@ -1,12 +1,12 @@
-import { VStack } from 'native-base'
-
-import { HeaderSection, MainSection } from '../../components/pages/Home'
+import { Page } from '../../components/shared/layout'
+import { MainSection } from '../../components/pages/Home'
+import { Header } from '../../components/shared/navigation'
 
 export default function Home() {
   return(
-    <VStack flex={1} pb={6} bg="gray.700">
-      <HeaderSection />
+    <Page>
+      <Header />
       <MainSection />
-    </VStack>
+    </Page>
   )
 }
