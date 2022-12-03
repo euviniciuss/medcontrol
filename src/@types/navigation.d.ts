@@ -7,6 +7,7 @@ export declare global {
       queries: undefined,
       ubs: undefined,
       pharmacy: undefined
+      redirect: undefined
     }
   }
 }
