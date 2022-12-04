@@ -10,6 +10,12 @@ export type IMarker = {
   address: string
   latitude: number
   longitude: number
+  stock: Stock[]
+}
+
+type Stock = {
+  name: string,
+  amount: number
 }
 
 export function MapSection() {
@@ -21,7 +27,17 @@ export function MapSection() {
       name: 'Farmácia do trabalhador',
       address: 'Rua Gardênia de teste',
       latitude: -2.5180957003210636,
-      longitude: -44.209035074256676
+      longitude: -44.209035074256676,
+      stock: [
+        {
+          name: 'Paracetamol 750mg, 20 comprimidos',
+          amount: 12,
+        },
+        {
+          name: 'Dramin B30 30ml',
+          amount: 35,
+        }
+      ]
     },
     {
       id: 2,
@@ -29,6 +45,12 @@ export function MapSection() {
       address: 'Rua teste de teste',
       latitude: -2.51694970949144,
       longitude: -44.20483954808304,
+      stock: [
+        {
+          name: 'Paracetamol',
+          amount: 12,
+        }
+      ]
     }
   ])
 
