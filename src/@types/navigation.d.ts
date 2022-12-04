@@ -8,6 +8,9 @@ export declare global {
       ubs: undefined,
       pharmacy: undefined
       redirect: undefined
+      details: {
+        orderId: string
+      }
     }
   }
 }

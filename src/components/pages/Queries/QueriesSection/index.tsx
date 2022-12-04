@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useNavigation } from '@react-navigation/native'
 
 import { Heading, HStack, VStack, Text, FlatList, Center, useTheme } from "native-base";
 import { XCircle } from 'phosphor-react-native'
@@ -7,6 +8,8 @@ import { Filter } from '../Filter'
 import { Order, OrderProps } from '../Order'
 
 export function QueriesSection() {
+  const navigation = useNavigation()
+
   const { colors } = useTheme()
 
   const [statusSelected, setStatusSelected] = useState<'open' | 'closed'>('open')
@@ -19,11 +22,15 @@ export function QueriesSection() {
     },
   ])
 
+  function handleOpenDetails(orderId: string) {
+    navigation.navigate('details', { orderId })
+  }
+
   return(
     <VStack flex={1} px={6}>
       <HStack w="full" mt={8} mb={4} justifyContent="space-between" alignItems="center">
         <Heading color="gray.100">Minhas consultas</Heading>
-        <Text color="gray.200">3</Text>
+        <Text color="gray.200">{orders.length}</Text>
       </HStack>
 
       <HStack space={3} mb={8}>
@@ -44,7 +51,7 @@ export function QueriesSection() {
       <FlatList 
         data={orders}
         keyExtractor={item => item.id}
-        renderItem={({ item }) => <Order key={item.id} data={item}/>}
+        renderItem={({ item }) => <Order key={item.id} data={item} onPress={() => handleOpenDetails(item.id)} />}
         showsVerticalScrollIndicator={false}
         contentContainerStyle={{ paddingBottom: 100 }}
         ListEmptyComponent={() => (
