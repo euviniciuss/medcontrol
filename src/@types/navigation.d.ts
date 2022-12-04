@@ -1,3 +1,5 @@
+import { IMarker } from '../components/pages/NearestPharmacy/MapSection'
+
 export declare global {
   namespace ReactNavigation {
     interface RootParamList {
@@ -7,6 +9,9 @@ export declare global {
       queries: undefined
       ubs: undefined
       pharmacy: undefined
+      detailsPharmacy: {
+        marker: IMarker
+      }
       redirect: undefined
       details: {
         orderId: string

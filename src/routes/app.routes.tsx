@@ -8,6 +8,7 @@ import Queries from '../pages/Queries'
 import DetailsQuerie from '../pages/DetailsQuerie'
 import NearestUBS from '../pages/NearestUBS'
 import NearestPharmacy from '../pages/NearestPharmacy'
+import DetailsPharmacy from '../pages/NearestPharmacy/Details'
 
 const { Navigator, Screen } = createNativeStackNavigator()
 
@@ -22,6 +23,7 @@ export function AppRoutes() {
       <Screen name="details" component={DetailsQuerie} />
       <Screen name="ubs" component={NearestUBS} />
       <Screen name="pharmacy" component={NearestPharmacy} />
+      <Screen name="detailsPharmacy" component={DetailsPharmacy} />
     </Navigator>
   )
 }
