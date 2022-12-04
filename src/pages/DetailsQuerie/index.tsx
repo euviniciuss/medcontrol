@@ -1,22 +1,24 @@
 import { Text } from "native-base";
 
-import { useRoute } from '@react-navigation/native'
-
-import { Page } from '../../components/shared/layout'
-import { Header } from '../../components/shared/navigation'
+import { useRoute } from "@react-navigation/native";
+import React from "react";
+import { Page } from "../../components/shared/layout";
+import { Header } from "../../components/shared/navigation";
 
 type RouteParms = {
-  orderId: string
-}
+  orderId: string;
+};
 
 export default function DetailsQuerie() {
-  const route = useRoute()
-  const { orderId } = route.params as RouteParms
+  const route = useRoute();
+  const { orderId } = route.params as RouteParms;
 
-  return(
+  return (
     <Page>
       <Header />
-      <Text mx={6} color="gray.100">{orderId}</Text>
+      <Text mx={6} color="gray.100">
+        {orderId}
+      </Text>
     </Page>
-  )
+  );
 }

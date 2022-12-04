@@ -7,7 +7,7 @@ export function HeaderSection() {
     <>
       <Logo />
       <Heading color="gray.100" fontSize="xl" mt={20} mb={6}>
-        Faça seu login no Medcontrol!
+        Faça seu cadastro no Medcontrol!
       </Heading>
     </>
   );

@@ -1,11 +1,12 @@
-import { NavigationContainer } from '@react-navigation/native'
+import React from "react";
+import { NavigationContainer } from "@react-navigation/native";
 
-import { AppRoutes } from './app.routes'
+import RealmWrapper from "./realmprovider";
 
 export function Routes() {
-  return(
+  return (
     <NavigationContainer>
-      <AppRoutes />
+      <RealmWrapper />
     </NavigationContainer>
-  )
+  );
 }

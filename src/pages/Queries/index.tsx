@@ -1,12 +1,13 @@
-import { Page } from '../../components/shared/layout'
-import { QueriesSection } from '../../components/pages/Queries'
-import { Header } from '../../components/shared/navigation'
+import React from "react";
+import { Page } from "../../components/shared/layout";
+import { QueriesSection } from "../../components/pages/Queries";
+import { Header } from "../../components/shared/navigation";
 
 export default function Queries() {
-  return(
+  return (
     <Page>
       <Header />
       <QueriesSection />
     </Page>
-  )
+  );
 }
