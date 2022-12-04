@@ -1,7 +1,12 @@
-import { Text } from "native-base";
+import { Page } from '../../components/shared/layout'
+
+import { HeaderSection, HeroSection } from '../../components/pages/NearestPharmacy'
 
 export default function NearestPharmacy() {
   return(
-    <Text color="white">Hello Nearest Pharmacy page</Text>
+    <Page>
+      <HeaderSection /> 
+      <HeroSection />
+    </Page>
   )
 }
