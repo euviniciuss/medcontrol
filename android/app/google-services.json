@@ -1,0 +1,76 @@
+{
+  "project_info": {
+    "project_number": "783681760551",
+    "project_id": "projectubs",
+    "storage_bucket": "projectubs.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:783681760551:android:73c7f0b811479515940d02",
+        "android_client_info": {
+          "package_name": "com.ubs"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "783681760551-uvlq13om99ioak71cf5bdv28e2d0cl3g.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ubs",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "783681760551-56g6kkssuam8ojbcsid0fnbuqovncnp3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBHRb2hf8uTZjn5l7BEzfEP5QMsHKDX54M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "783681760551-56g6kkssuam8ojbcsid0fnbuqovncnp3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:783681760551:android:f72dc3db5f840b4e940d02",
+        "android_client_info": {
+          "package_name": "com.ubs"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "783681760551-56g6kkssuam8ojbcsid0fnbuqovncnp3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBHRb2hf8uTZjn5l7BEzfEP5QMsHKDX54M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "783681760551-56g6kkssuam8ojbcsid0fnbuqovncnp3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

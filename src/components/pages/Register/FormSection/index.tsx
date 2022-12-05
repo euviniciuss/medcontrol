@@ -4,8 +4,9 @@ import { useNavigation } from '@react-navigation/native'
 
 import { Icon, Pressable, useTheme, FormControl, Text, Link, HStack } from 'native-base'
 import { Eye, EyeSlash } from 'phosphor-react-native'
-
 import { Input, Button } from '../../../shared/form'
+import auth from '@react-native-firebase/auth';
+
 
 export function FormSection() {
   const navigation = useNavigation()
@@ -13,16 +14,18 @@ export function FormSection() {
   const { colors } = useTheme()
   const [showPassword, setShowPassword] = useState(false)
 
-  const [name, setName] = useState('')
+  const [nome, setNome] = useState('')
   const [email, setEmail] = useState('')
-  const [passoword, setPassword] = useState('')
+  const [password, setPassword] = useState('')
 
-  function handleLogin() {
-    navigation.navigate('home')
-
-    console.log("Nome: ", name, "Email: ", email, "Senha: ",passoword);
+async function handleRegister (nome:string, email: string,password: string){
+    if (nome==''||email == ''|| password == ''){
+      alert('Há campos em branco')
+    }
+    else{
+      auth().createUserWithEmailAndPassword(email, password).then((res)=>navigation.navigate('home', {userID: res.user.email}))
   }
-
+}
   return(
     <>
       <FormControl isRequired mb={4}>
@@ -31,7 +34,7 @@ export function FormSection() {
           placeholder="Digite seu nome" 
           type="text"
           mb={4}
-          onChangeText={setName}
+          onChangeText={setNome}
         />
         <FormControl.Label>Email</FormControl.Label>
         <Input 
@@ -59,7 +62,7 @@ export function FormSection() {
         />
       </FormControl>
 
-      <Button w="full" mt={12} onPress={handleLogin}>
+      <Button w="full" mt={12} onPress={()=>handleRegister}>
         <Button.Title>Cadastra-se</Button.Title>
       </Button>
 

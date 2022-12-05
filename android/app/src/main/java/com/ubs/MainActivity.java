@@ -1,4 +1,4 @@
-package com.unimed;
+package com.ubs;
 
 import android.os.Build;
 import android.os.Bundle;
