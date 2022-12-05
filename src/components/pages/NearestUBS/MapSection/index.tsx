@@ -18,14 +18,14 @@ export function MapSection() {
   const [markers, setMarkers] = useState<IMarkerUbs[]>([
     {
       id: 1,
-      name: 'Farmácia do trabalhador',
+      name: 'Unidade Básica de Saúde do Cohatrac V',
       address: 'Rua São João Terceiro, Q12/B, N18',
       latitude: -2.5180957003210636,
       longitude: -44.209035074256676,
     },
     {
       id: 2,
-      name: 'Unifarma',
+      name: 'Unidade Básica de Saúde Safira',
       address: 'Rua da Paz, Q12/A, N26',
       latitude: -2.51694970949144,
       longitude: -44.20483954808304,
