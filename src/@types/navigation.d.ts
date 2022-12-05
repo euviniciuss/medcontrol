@@ -1,4 +1,5 @@
 import { IMarker } from '../components/pages/NearestPharmacy/MapSection'
+import { IMarkerUbs } from '../components/pages/NearestUBS'
 
 export declare global {
   namespace ReactNavigation {
@@ -8,6 +9,9 @@ export declare global {
       personal: undefined
       queries: undefined
       ubs: undefined
+      detailsUbs: {
+        marker: IMarkerUbs
+      }
       pharmacy: undefined
       detailsPharmacy: {
         marker: IMarker
