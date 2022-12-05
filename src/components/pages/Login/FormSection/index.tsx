@@ -1,27 +1,30 @@
 import { useState } from 'react'
-
 import { useNavigation } from '@react-navigation/native'
-
 import { Icon, Pressable, useTheme, FormControl, Text, Link, HStack } from 'native-base'
 import { Eye, EyeSlash } from 'phosphor-react-native'
-
 import { Input, Button } from '../../../shared/form'
+import SignInWithGoogle from '../../../../services/config/AuthWithGoogle'
+import { FirebaseApp } from '../../../../services/config/FirebaseApp'
+import { getAuth, signInWithEmailAndPassword } from 'firebase/auth'
 
 export function FormSection() {
+  const AuthInstance = getAuth(FirebaseApp);
   const navigation = useNavigation()
-
   const { colors } = useTheme()
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
   const [showPassword, setShowPassword] = useState(false)
 
-  const [email, setEmail] = useState('')
-  const [passoword, setPassword] = useState('')
-
-  function handleLogin() {
-    navigation.navigate('home')
-
-    console.log("Email: ", email, "Senha: ",passoword);
+  async function handleLogin (email: string,password: string){
+    if (email == ''|| password == ''){
+      alert('Há campos em branco')
+    }
+    else{
+    signInWithEmailAndPassword(AuthInstance,email,password)
+    .then(res=>navigation.navigate('home', {userID: res.user.uid}))
+    .catch(err=>alert('ERRO:' + err))
   }
-
+}
   return(
     <>
       <FormControl isRequired mb={4} >
@@ -51,9 +54,10 @@ export function FormSection() {
         />
       </FormControl>
 
-      <Button w="full" mt={12} onPress={handleLogin}>
+      <Button w="full" mt={12} onPress={()=>handleLogin(email,password)}>
         <Button.Title>Entrar</Button.Title>
       </Button>
+      <SignInWithGoogle/>
       
       <HStack mt={24} alignItems="center" textAlign="center" justifyContent="center" w="full">
         <Text fontSize="md"color="gray.100">Ainda não tem conta?</Text>
@@ -69,6 +73,7 @@ export function FormSection() {
         >
           Cadastre-se
         </Link>
+
       </HStack>
     </>
   )
