@@ -1,4 +1,4 @@
-package com.unimed.newarchitecture;
+package com.ubs.newarchitecture;
 
 import android.app.Application;
 import androidx.annotation.NonNull;
@@ -20,9 +20,9 @@ import com.facebook.react.fabric.EmptyReactNativeConfig;
 import com.facebook.react.fabric.FabricJSIModuleProvider;
 import com.facebook.react.fabric.ReactNativeConfig;
 import com.facebook.react.uimanager.ViewManagerRegistry;
-import com.unimed.BuildConfig;
-import com.unimed.newarchitecture.components.MainComponentsRegistry;
-import com.unimed.newarchitecture.modules.MainApplicationTurboModuleManagerDelegate;
+import com.ubs.BuildConfig;
+import com.ubs.newarchitecture.components.MainComponentsRegistry;
+import com.ubs.newarchitecture.modules.MainApplicationTurboModuleManagerDelegate;
 import java.util.ArrayList;
 import java.util.List;
 

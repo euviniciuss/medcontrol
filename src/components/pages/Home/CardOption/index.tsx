@@ -33,7 +33,7 @@ export function CardOption({ title, icon, ...rest }: Props) {
         </VStack>
 
 
-        <Container backgroundColor="primary.700" borderRadius="100%" p={2} mt={8}>
+        <Container backgroundColor="primary.700" borderRadius={100} p={2} mt={8}>
           <Icon as={<ArrowRight color={colors.white} />}/>
         </Container>
       </VStack>

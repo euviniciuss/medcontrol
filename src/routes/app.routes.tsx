@@ -11,9 +11,12 @@ import DetailsUBS from '../pages/NearestUBS/Details'
 import NearestPharmacy from '../pages/NearestPharmacy'
 import DetailsPharmacy from '../pages/NearestPharmacy/Details'
 
+
 const { Navigator, Screen } = createNativeStackNavigator()
 
 export function AppRoutes() {
+ 
+  
   return(
     <Navigator screenOptions={{ headerShown: false }}>
       <Screen name="login" component={Login} />
@@ -28,4 +31,4 @@ export function AppRoutes() {
       <Screen name="detailsPharmacy" component={DetailsPharmacy} />
     </Navigator>
   )
-}
+} 
