@@ -25,7 +25,7 @@ export function MapSection() {
     {
       id: 1,
       name: 'Farmácia do trabalhador',
-      address: 'Rua Gardênia de teste',
+      address: 'Rua São João Terceiro, Q12/B, N18',
       latitude: -2.5180957003210636,
       longitude: -44.209035074256676,
       stock: [
@@ -42,7 +42,7 @@ export function MapSection() {
     {
       id: 2,
       name: 'Unifarma',
-      address: 'Rua teste de teste',
+      address: 'Rua da Paz, Q12/A, N26',
       latitude: -2.51694970949144,
       longitude: -44.20483954808304,
       stock: [
