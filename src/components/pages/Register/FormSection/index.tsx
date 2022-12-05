@@ -17,7 +17,7 @@ export function FormSection() {
   const [email, setEmail] = useState('')
   const [passoword, setPassword] = useState('')
 
-  function handleLogin() {
+  function handleRegister() {
     navigation.navigate('home')
 
     console.log("Nome: ", name, "Email: ", email, "Senha: ",passoword);
@@ -59,7 +59,7 @@ export function FormSection() {
         />
       </FormControl>
 
-      <Button w="full" mt={12} onPress={handleLogin}>
+      <Button w="full" mt={12} onPress={handleRegister}>
         <Button.Title>Cadastra-se</Button.Title>
       </Button>
 

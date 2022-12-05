@@ -1,7 +1,14 @@
-import { Text } from "native-base";
+import { Page } from '../../components/shared/layout'
+import { GoBackHeader } from '../../components/shared/navigation'
+
+import { PersonalSection, MedicineSection } from '../../components/pages/Personal'
 
 export default function Personal() {
   return(
-    <Text color="white">Hello Personal Page</Text>
+    <Page>
+      <GoBackHeader page="Dados pessoais" />
+      <PersonalSection />
+      <MedicineSection />
+    </Page>
   )
 }
