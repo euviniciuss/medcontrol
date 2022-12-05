@@ -18,19 +18,12 @@ export function FormSection() {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
 
-<<<<<<< HEAD
-  function handleRegister() {
-    navigation.navigate('home')
-
-    console.log("Nome: ", name, "Email: ", email, "Senha: ",passoword);
-=======
 async function handleRegister (nome:string, email: string,password: string){
     if (nome==''||email == ''|| password == ''){
       alert('Há campos em branco')
     }
     else{
       auth().createUserWithEmailAndPassword(email, password).then((res)=>navigation.navigate('home', {userID: res.user.email}))
->>>>>>> b6bdbbf8dc5d92fb11ecb88f36178f7f5959d714
   }
 }
   return(
@@ -69,11 +62,7 @@ async function handleRegister (nome:string, email: string,password: string){
         />
       </FormControl>
 
-<<<<<<< HEAD
-      <Button w="full" mt={12} onPress={handleRegister}>
-=======
       <Button w="full" mt={12} onPress={()=>handleRegister}>
->>>>>>> b6bdbbf8dc5d92fb11ecb88f36178f7f5959d714
         <Button.Title>Cadastra-se</Button.Title>
       </Button>
 
