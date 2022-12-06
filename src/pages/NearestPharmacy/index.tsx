@@ -1,14 +1,14 @@
 import { Page } from '../../components/shared/layout'
 
 import { GoBackHeader as Header } from '../../components/shared/navigation'
-import { HeroSection, MapSection } from '../../components/pages/NearestPharmacy'
+import { MapSection } from '../../components/pages/NearestPharmacy'
+
 
 export default function NearestPharmacy() {
   return(
     <Page>
-      <Header page="Farmácias Próximas" /> 
-      <HeroSection />
-      <MapSection />
+      <Header page="Encontre farmácias próximas de você!" /> 
+      <MapSection/>
     </Page>
   )
 }

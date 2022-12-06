@@ -7,7 +7,6 @@ export default function NearestUBS() {
   return(
     <Page>
       <Header page="UBS's Próximas" /> 
-      <HeroSection />
       <MapSection />
     </Page>
   )
