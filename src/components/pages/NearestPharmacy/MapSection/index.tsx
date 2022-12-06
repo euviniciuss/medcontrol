@@ -66,14 +66,14 @@ export function MapSection() {
         }}
       >
         {
-          markers.map(marker => (
+          markers.map(item => (
             <Marker 
-              key={marker.id}
+              key={item.id}
               coordinate={{
-                latitude: marker.latitude, 
-                longitude: marker.longitude,
+                latitude: item.latitude, 
+                longitude: item.longitude,
               }}
-              onPress={() =>  navigation.navigate('detailsPharmacy', { marker }) }
+              onPress={() =>  navigation.navigate('detailsPharmacy', { marker: item }) }
             />
           ))
         }
